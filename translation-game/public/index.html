@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Word Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-language"></i> Translation Game</h1>
+            <p class="subtitle">Bulgarian → English</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="question-section">
+                    <h2>What is the English translation of:</h2>
+                    <div class="word-to-translate" id="bgWord">Loading...</div>
+                </div>
+
+                <div class="options-section">
+                    <div class="options">
+                        <button class="option-btn" id="option0" onclick="selectOption(0)"></button>
+                        <button class="option-btn" id="option1" onclick="selectOption(1)"></button>
+                    </div>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+
+                <div class="actions">
+                    <button class="next-btn" id="nextBtn" onclick="nextQuestion()" disabled>
+                        <i class="fas fa-arrow-right"></i> Next Question
+                    </button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Correct: <span id="correctCount">0</span></span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Wrong: <span id="wrongCount">0</span></span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Accuracy: <span id="accuracy">0%</span></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Simple Translation Game • Refresh page to restart</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

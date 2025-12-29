@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.question-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.question-section h2 {
+    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.word-to-translate {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.options-section {
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.option-btn {
+    flex: 1;
+    max-width: 300px;
+    padding: 25px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 3px solid transparent;
+}
+
+.option-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background: #e9ecef;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.feedback {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.feedback.wrong {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.feedback.error {
+    background: #fff3cd;
+    color: #856404;
+    border: 2px solid #ffeaa7;
+}
+
+.actions {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.next-btn {
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.next-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+.next-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.stat i {
+    font-size: 1.5rem;
+}
+
+.stat:nth-child(1) i { color: #28a745; }
+.stat:nth-child(2) i { color: #dc3545; }
+.stat:nth-child(3) i { color: #007bff; }
+
+.stat span {
+    font-weight: 600;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        padding: 25px;
+    }
+    
+    .options {
+        flex-direction: column;
+    }
+    
+    .option-btn {
+        max-width: 100%;
+    }
+    
+    .word-to-translate {
+        font-size: 2.8rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
